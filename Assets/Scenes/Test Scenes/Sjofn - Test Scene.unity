@@ -2934,6 +2934,34 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player_Prefab
       objectReference: {fileID: 0}
+    - target: {fileID: 1692098360893949376, guid: 411107ac983f31746832c4bd3cf13bd9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.09389
+      objectReference: {fileID: 0}
+    - target: {fileID: 1692098360893949376, guid: 411107ac983f31746832c4bd3cf13bd9, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.3265293
+      objectReference: {fileID: 0}
+    - target: {fileID: 1692098360893949376, guid: 411107ac983f31746832c4bd3cf13bd9, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -3.3022847
+      objectReference: {fileID: 0}
+    - target: {fileID: 1692098360893949376, guid: 411107ac983f31746832c4bd3cf13bd9, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.98836154
+      objectReference: {fileID: 0}
+    - target: {fileID: 1692098360893949376, guid: 411107ac983f31746832c4bd3cf13bd9, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.15212339
+      objectReference: {fileID: 0}
+    - target: {fileID: 1692098360893949376, guid: 411107ac983f31746832c4bd3cf13bd9, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.0000000051569478
+      objectReference: {fileID: 0}
+    - target: {fileID: 1692098360893949376, guid: 411107ac983f31746832c4bd3cf13bd9, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 7.937303e-10
+      objectReference: {fileID: 0}
     - target: {fileID: 3648608680194852403, guid: 411107ac983f31746832c4bd3cf13bd9, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.09389
@@ -3108,6 +3136,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 809102540693947153, guid: bffdc4df986c646448d6bfa5fdd67fea, type: 3}
+      propertyPath: CenterOnActivate
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1928788455828920996, guid: bffdc4df986c646448d6bfa5fdd67fea, type: 3}
+      propertyPath: VerticalAxis.Wrap
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1928788455828920996, guid: bffdc4df986c646448d6bfa5fdd67fea, type: 3}
+      propertyPath: HorizontalAxis.Wrap
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1928788455828920996, guid: bffdc4df986c646448d6bfa5fdd67fea, type: 3}
+      propertyPath: VerticalAxis.Range.x
+      value: -35
+      objectReference: {fileID: 0}
     - target: {fileID: 2405431666413596871, guid: bffdc4df986c646448d6bfa5fdd67fea, type: 3}
       propertyPath: Target.TrackingTarget
       value: 
@@ -3115,6 +3159,10 @@ PrefabInstance:
     - target: {fileID: 6179398331333944701, guid: bffdc4df986c646448d6bfa5fdd67fea, type: 3}
       propertyPath: m_Name
       value: FreeLook Camera
+      objectReference: {fileID: 0}
+    - target: {fileID: 7919329304355070121, guid: bffdc4df986c646448d6bfa5fdd67fea, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
