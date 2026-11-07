@@ -39,20 +39,6 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         xRotation = freeLookCamera.transform.rotation.eulerAngles.x;
-        /*
-        float horizontalInput = Input.GetAxis("Horizontal");
-        float verticalInput = Input.GetAxis("Vertical");
-
-        
-        if(currentState == CharacterStates.InAir)
-        {
-            playerRB.useGravity = false;
-        }
-        else if(currentState == CharacterStates.InAir)
-        {
-            playerRB.useGravity = true;
-        }
-        */
 
         //make state exclusive
 

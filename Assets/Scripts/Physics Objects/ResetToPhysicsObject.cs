@@ -8,25 +8,6 @@ public class ResetToPhysicsObject : MonoBehaviour
     public GameObject player;
     [SerializeField] bool isGrabbed;
 
-    /*
-    private void OnCollisionEnter(Collision other)
-    {
-        if(other.gameObject.CompareTag("Ground") && distanceFromPlayer >= 3f)
-        {
-            gameObject.layer = LayerMask.NameToLayer("Physics Object");
-        }
-    }
-    
-
-    private void OnCollisionStay(Collision other)
-    {
-        if (other.gameObject.CompareTag("Ground") && distanceFromPlayer >= 3f)
-        {
-            gameObject.layer = LayerMask.NameToLayer("Physics Object");
-        }
-    }
-    */
-
     public void Update()
     {
         //uggg find distance

@@ -66,8 +66,6 @@ public class PickUpController : MonoBehaviour
     {
         if (pickObject.GetComponent<Rigidbody>())
         {
-           // GrabbedObject?.Invoke();
-            //Debug.Log("Grabbed " + pickObject.name);
             heldObjectRB = pickObject.GetComponent<Rigidbody>(); //grabs held objects RB
             heldObjectRB.useGravity = false; //prevents held object from falling
             heldObjectRB.linearDamping = pickUpStiffness; //adds a bit of drag to the object 
@@ -87,6 +85,7 @@ public class PickUpController : MonoBehaviour
         Vector3 direction = transform.forward * pickUpRange;
 
         Gizmos.DrawRay(startingPOint, direction);
+        //this draws a gizmo in the scene view so I can see where the ray is.
     }
 
     void DropObject()
