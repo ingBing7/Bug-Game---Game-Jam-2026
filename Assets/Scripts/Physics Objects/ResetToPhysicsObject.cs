@@ -4,22 +4,38 @@ using UnityEngine.Rendering;
 public class ResetToPhysicsObject : MonoBehaviour
 {
     [SerializeField] float distanceFromPlayer;
+    public GameObject physicsObject;
+    public GameObject player;
     [SerializeField] bool isGrabbed;
 
+    /*
     private void OnCollisionEnter(Collision other)
     {
-        
-        if(other.gameObject.CompareTag("Ground"))
+        if(other.gameObject.CompareTag("Ground") && distanceFromPlayer >= 3f)
+        {
+            gameObject.layer = LayerMask.NameToLayer("Physics Object");
+        }
+    }
+    
+
+    private void OnCollisionStay(Collision other)
+    {
+        if (other.gameObject.CompareTag("Ground") && distanceFromPlayer >= 3f)
+        {
+            gameObject.layer = LayerMask.NameToLayer("Physics Object");
+        }
+    }
+    */
+
+    public void Update()
+    {
+        //uggg find distance
+        distanceFromPlayer = Vector3.Distance(player.transform.position, physicsObject.transform.position);
+        if(distanceFromPlayer >= 5f)
         {
             gameObject.layer = LayerMask.NameToLayer("Physics Object");
 
         }
-        
-    }
-
-    public void Update()
-    {
-        ///uggg find distance
     }
 
     public void Start()
