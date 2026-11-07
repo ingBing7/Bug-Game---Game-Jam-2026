@@ -1893,6 +1893,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 651236148}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!224 &962447342 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 4396412040049475691, guid: 909b0221e29035b4a85cbf2443b77fbb, type: 3}
+  m_PrefabInstance: {fileID: 5873916355703331597}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &977598108
 GameObject:
   m_ObjectHideFlags: 0
@@ -2620,6 +2625,95 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1223121766}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1225005988
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1225005989}
+  - component: {fileID: 1225005992}
+  - component: {fileID: 1225005991}
+  - component: {fileID: 1225005990}
+  m_Layer: 5
+  m_Name: BlackScreen
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1225005989
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1225005988}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 962447342}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 1.5555115}
+  m_SizeDelta: {x: 31.1084, y: 34.2195}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1225005990
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1225005988}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40786723a1b43534792db21fa746d88d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FadeToBlack
+  image: {fileID: 1225005991}
+--- !u!114 &1225005991
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1225005988}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 0}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1225005992
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1225005988}
+  m_CullTransparentMesh: 1
 --- !u!1 &1230623583
 GameObject:
   m_ObjectHideFlags: 0
@@ -4417,6 +4511,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3708880360792625810, guid: 3fc8badcc08a55946a746d704ef93d2b, type: 3}
+      propertyPath: fadeToBlack
+      value: 
+      objectReference: {fileID: 1225005990}
     - target: {fileID: 5507354720942817392, guid: 3fc8badcc08a55946a746d704ef93d2b, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.98041
@@ -4865,7 +4963,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 4396412040049475691, guid: 909b0221e29035b4a85cbf2443b77fbb, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1225005989}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 909b0221e29035b4a85cbf2443b77fbb, type: 3}
 --- !u!1001 &7617715922932838959

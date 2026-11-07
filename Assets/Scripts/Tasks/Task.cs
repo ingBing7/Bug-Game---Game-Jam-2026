@@ -6,6 +6,8 @@ public class Task : MonoBehaviour
     public float maxTasksForDay;
     public bool levelOver;
 
+    public FadeToBlack fadeToBlack;
+
     public void UpdateOverallTaskCounter()
     {
         tasksCompleted++;
@@ -14,7 +16,7 @@ public class Task : MonoBehaviour
         {
             levelOver = true;
             //fade to black, indicates somehow that the player has died.
-            Debug.Log("Actions Completed for the day. you DIED!!!!");
+            fadeToBlack.FadeAndLoad("Sjofn - Test Scene", 1);
         }
     }
 
