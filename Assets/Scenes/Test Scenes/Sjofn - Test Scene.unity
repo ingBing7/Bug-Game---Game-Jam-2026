@@ -4142,6 +4142,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7775989353076446339, guid: 411107ac983f31746832c4bd3cf13bd9, type: 3}
+      propertyPath: throwForce
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 7775989353076446339, guid: 411107ac983f31746832c4bd3cf13bd9, type: 3}
       propertyPath: pickUpRange
       value: 2.6
       objectReference: {fileID: 0}

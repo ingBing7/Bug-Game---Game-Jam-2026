@@ -20,6 +20,7 @@ public class PickUpController : MonoBehaviour
     [SerializeField] private float pickUpRange = 0.5f;
     [SerializeField] private float pickUpForce = 100f;
     [SerializeField] private float pickUpStiffness = 20f; //higher the number, less bounciness. Lower the number, more bounciness. 
+    [SerializeField] private float throwForce = 3f;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -43,6 +44,13 @@ public class PickUpController : MonoBehaviour
             else
             {
                 DropObject();
+            }
+        }
+        if(Input.GetMouseButtonDown(1))
+        {
+            if(heldObject != null)
+            {
+                ThrowObject();
             }
         }
 
@@ -77,15 +85,15 @@ public class PickUpController : MonoBehaviour
         }
     }
 
-    private void OnDrawGizmos()
+    void ThrowObject()
     {
-        Gizmos.color = Color.red;
-
-        Vector3 startingPOint = transform.position;
-        Vector3 direction = transform.forward * pickUpRange;
-
-        Gizmos.DrawRay(startingPOint, direction);
-        //this draws a line so I can see where the ray is. Does not appear in final build.
+        heldObjectRB.AddForce(transform.forward * throwForce);
+        heldObjectRB.useGravity = true;
+        heldObjectRB.linearDamping = 1;
+        heldObjectRB.constraints = RigidbodyConstraints.None;
+        heldObjectRB.transform.parent = null;
+        heldObject = null;
+        Debug.Log("Thrown Object");
     }
 
     void DropObject()
@@ -99,5 +107,16 @@ public class PickUpController : MonoBehaviour
 
         heldObjectRB.transform.parent = null;
         heldObject = null;
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+
+        Vector3 startingPOint = transform.position;
+        Vector3 direction = transform.forward * pickUpRange;
+
+        Gizmos.DrawRay(startingPOint, direction);
+        //this draws a line so I can see where the ray is. 
     }
 }
