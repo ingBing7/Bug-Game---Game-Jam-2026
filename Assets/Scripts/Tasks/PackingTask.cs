@@ -3,10 +3,9 @@ using UnityEngine;
 public class PackingTask : MonoBehaviour
 {
     // Events
-    public delegate void EmptyDelagate();
-    public event EmptyDelagate CompletedTask;
-    public event EmptyDelagate IncreaseCounter;
-    public event EmptyDelagate DecreaseCounter;
+    public AudioManager audioManager;
+
+    public Task task;
 
     public float objectsPutInBox = 0f;
     public float maxObjectsInBox = 3f;
@@ -23,11 +22,12 @@ public class PackingTask : MonoBehaviour
                 if (objectsPutInBox == maxObjectsInBox)
                 {
                     actionComplete = true;
-                    CompletedTask?.Invoke();
+                    audioManager.TaskCompletedSound();
+                    task.UpdateOverallTaskCounter();
                 }
                 else
                 {
-                    IncreaseCounter?.Invoke();
+                    audioManager.TaskProgressSound();
                 }
             }
         }
@@ -38,7 +38,8 @@ public class PackingTask : MonoBehaviour
         if (other.gameObject.CompareTag("BoxObject") && !actionComplete)
         {
             objectsPutInBox--;
-            DecreaseCounter?.Invoke();
+            Debug.Log("Object removed from box");
+            //figure out something special this does.
         }
     }
 

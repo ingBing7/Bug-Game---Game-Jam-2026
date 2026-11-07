@@ -3,19 +3,9 @@ using UnityEngine;
 public class SportTask : MonoBehaviour
 {
     public bool ballInZone;
-    public delegate void EmptyDelagate();
-    public event EmptyDelagate CompletedSportTask;
 
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public AudioManager audioManager;
+    public Task task;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -24,7 +14,8 @@ public class SportTask : MonoBehaviour
             if (other.gameObject.CompareTag("SportBall"))
             {
                 ballInZone = true;
-                CompletedSportTask?.Invoke();
+                audioManager.TaskCompletedSound();
+                task.UpdateOverallTaskCounter();
             }
         }
 

@@ -3,15 +3,6 @@ using static PlayerMovement;
 
 public class PlayerMovement : MonoBehaviour
 {
-    /*
-    public enum CharacterStates
-    {
-        InAir,
-        Grounded
-    }
-    //State Machine
-    [SerializeField] CharacterStates currentState;
-    */
 
     [Header("References")]
     [SerializeField] Rigidbody playerRB;
@@ -39,8 +30,6 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         xRotation = freeLookCamera.transform.rotation.eulerAngles.x;
-
-        //make state exclusive
 
         if(Input.GetKey(KeyCode.W))
         {

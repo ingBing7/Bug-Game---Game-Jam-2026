@@ -3,10 +3,6 @@ using UnityEngine;
 public class PickUpController : MonoBehaviour
 {
 
-    //events 
-    //public delegate void EmptyDelagate();
-    //public event EmptyDelagate GrabbedObject;
-
     // layer mask
     public LayerMask IgnoreMe;
 

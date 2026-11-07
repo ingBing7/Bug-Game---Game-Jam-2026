@@ -6,11 +6,6 @@ public class Task : MonoBehaviour
     public float maxTasksForDay;
     public bool levelOver;
 
-    public void Start()
-    {
-        Locator.Instance.PackTask.CompletedTask += UpdateOverallTaskCounter;
-        Locator.Instance.SportTask.CompletedSportTask += UpdateOverallTaskCounter;
-    }
 
     public void UpdateOverallTaskCounter()
     {

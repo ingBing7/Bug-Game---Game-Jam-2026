@@ -18,11 +18,7 @@ public class Locator : MonoBehaviour
         Instance = this;
 
         GameObject raycastHolder = GameObject.FindWithTag("Raycast Holder");
-        GameObject packTaskZone = GameObject.FindWithTag("Pack Task Zone");
-        GameObject sportTaskZone = GameObject.FindWithTag("Sport Task Zone");
 
         PickUp = raycastHolder.GetComponent<PickUpController>();
-        PackTask = packTaskZone.GetComponent<PackingTask>();
-        SportTask = sportTaskZone.GetComponent<SportTask>();
     }
 }

@@ -16,10 +16,6 @@ public class AudioManager : MonoBehaviour
         Locator.Instance.PickUp.DroppedObject += DroppedObjectSound;
         Locator.Instance.PickUp.ThrewObject += ThrowObjectSound;
 
-        // Task Events 
-        Locator.Instance.PackTask.CompletedTask += TaskCompletedSound;
-        Locator.Instance.PackTask.IncreaseCounter += TaskProgressSound;
-        Locator.Instance.SportTask.CompletedSportTask += TaskCompletedSound;
     }
 
     public void ThrowObjectSound()
