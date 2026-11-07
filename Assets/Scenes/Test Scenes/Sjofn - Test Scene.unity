@@ -181,7 +181,7 @@ PrefabInstance:
       objectReference: {fileID: 2023173585}
     - target: {fileID: 8452520785241041743, guid: 6b9df3ab075e1564db27f307b0734053, type: 3}
       propertyPath: maxObjectsInBox
-      value: 7
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4121,6 +4121,10 @@ PrefabInstance:
       propertyPath: audioManager
       value: 
       objectReference: {fileID: 2023173585}
+    - target: {fileID: 8452520785241041743, guid: 6b9df3ab075e1564db27f307b0734053, type: 3}
+      propertyPath: maxObjectsInBox
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

@@ -6,7 +6,6 @@ public class Task : MonoBehaviour
     public float maxTasksForDay;
     public bool levelOver;
 
-
     public void UpdateOverallTaskCounter()
     {
         tasksCompleted++;
