@@ -23,6 +23,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] float minFloatHeight;
     [SerializeField] Camera freeLookCamera;
     [SerializeField] float currentHeight;
+    [SerializeField] float xRotation;
+
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -31,17 +33,19 @@ public class PlayerMovement : MonoBehaviour
         playerRB = GetComponent<Rigidbody>();
         currentState = CharacterStates.Grounded;
         currentHeight = transform.position.y;
-
         Cursor.lockState = CursorLockMode.Locked;
     }
 
     // Update is called once per frame
     void Update()
     {
+        xRotation = freeLookCamera.transform.rotation.eulerAngles.x;
+
+        /*
         float horizontalInput = Input.GetAxis("Horizontal");
         float verticalInput = Input.GetAxis("Vertical");
 
-        /*
+        
         if(currentState == CharacterStates.InAir)
         {
             playerRB.useGravity = false;
@@ -52,6 +56,7 @@ public class PlayerMovement : MonoBehaviour
         }
         */
         //make state exclusive
+
         if(Input.GetKey(KeyCode.W))
         {
             FlyingLogic();
@@ -85,9 +90,9 @@ public class PlayerMovement : MonoBehaviour
 
     private void FlyingLogic()
     {
-        Vector3 cameraForward = new Vector3(freeLookCamera.transform.forward.x, freeLookCamera.transform.forward.y, freeLookCamera.transform.forward.z);
+        Vector3 cameraForward = new Vector3(freeLookCamera.transform.forward.x, 0, freeLookCamera.transform.forward.z);
         transform.rotation = Quaternion.LookRotation(cameraForward);
-        transform.Rotate(new Vector3(0, 0, 0), Space.Self);
+        transform.Rotate(new Vector3(xRotation, 0, 0), Space.Self);
 
         Vector3 forward = freeLookCamera.transform.forward;
         Vector3 flyDirection = forward.normalized;

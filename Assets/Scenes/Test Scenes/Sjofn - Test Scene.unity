@@ -206,8 +206,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.2534013, y: 4.4075008e-10, z: -1.1545496e-10, w: 0.9673613}
-  m_LocalPosition: {x: 0, y: 3.1230001, z: -4}
+  m_LocalRotation: {x: 0.1521234, y: -0.000000014284301, z: 0.0000000021985647, w: 0.98836154}
+  m_LocalPosition: {x: 0, y: 2.3765292, z: -4.7685847}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -515,9 +515,10 @@ MonoBehaviour:
   playerRB: {fileID: 0}
   moveSpeed: 10
   maxFloatHeight: 1000
-  minFloatHeight: 1.5
+  minFloatHeight: 0
   freeLookCamera: {fileID: 330585545}
   currentHeight: 0
+  xRotation: 0
 --- !u!1 &760305463
 GameObject:
   m_ObjectHideFlags: 0
@@ -774,7 +775,7 @@ MonoBehaviour:
     AngularDampingMode: 0
     RotationDamping: {x: 1, y: 1, z: 1}
     QuaternionDamping: 1
-  OrbitStyle: 1
+  OrbitStyle: 0
   Radius: 5
   Orbits:
     Top:
@@ -869,8 +870,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 832439904}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.2534013, y: 4.1251066e-10, z: -7.650821e-12, w: 0.9673613}
-  m_LocalPosition: {x: 0, y: 3.1230001, z: -4}
+  m_LocalRotation: {x: 0.1521234, y: -0.000000014284301, z: 0.0000000021985642, w: 0.98836154}
+  m_LocalPosition: {x: 0, y: 2.3765292, z: -4.7685847}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1032,7 +1033,7 @@ Transform:
   m_GameObject: {fileID: 1337618114}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.0832, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.8309, y: 1.8309, z: 1.8309}
   m_ConstrainProportionsScale: 0
   m_Children: []
