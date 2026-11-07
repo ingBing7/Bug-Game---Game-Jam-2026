@@ -39,8 +39,6 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        xRotation = freeLookCamera.transform.rotation.eulerAngles.x;
-
         /*
         float horizontalInput = Input.GetAxis("Horizontal");
         float verticalInput = Input.GetAxis("Vertical");
@@ -55,6 +53,7 @@ public class PlayerMovement : MonoBehaviour
             playerRB.useGravity = true;
         }
         */
+
         //make state exclusive
 
         if(Input.GetKey(KeyCode.W))
@@ -90,9 +89,9 @@ public class PlayerMovement : MonoBehaviour
 
     private void FlyingLogic()
     {
-        Vector3 cameraForward = new Vector3(freeLookCamera.transform.forward.x, 0, freeLookCamera.transform.forward.z);
+        Vector3 cameraForward = new Vector3(freeLookCamera.transform.forward.x, freeLookCamera.transform.forward.y, freeLookCamera.transform.forward.z);
         transform.rotation = Quaternion.LookRotation(cameraForward);
-        transform.Rotate(new Vector3(xRotation, 0, 0), Space.Self);
+        transform.Rotate(new Vector3(0, 0, 0), Space.Self);
 
         Vector3 forward = freeLookCamera.transform.forward;
         Vector3 flyDirection = forward.normalized;
@@ -111,3 +110,4 @@ public class PlayerMovement : MonoBehaviour
 }
 
 //tutorial followed: https://www.youtube.com/watch?v=8_49VvqssMU
+//make sure to use capsule collider it does NOT work with a box collider. Makes 
