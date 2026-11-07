@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Ground
   - Raycast Holder
+  - BoxObject
+  - Task Zone
   layers:
   - Default
   - TransparentFX

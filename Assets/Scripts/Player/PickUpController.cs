@@ -85,7 +85,7 @@ public class PickUpController : MonoBehaviour
         Vector3 direction = transform.forward * pickUpRange;
 
         Gizmos.DrawRay(startingPOint, direction);
-        //this draws a gizmo in the scene view so I can see where the ray is.
+        //this draws a line so I can see where the ray is. Does not appear in final build.
     }
 
     void DropObject()
