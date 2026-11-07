@@ -11,6 +11,8 @@ TagManager:
   - Pack Task Zone
   - SportBall
   - Sport Task Zone
+  - ArtSupply
+  - Art Supply Zone
   layers:
   - Default
   - TransparentFX
