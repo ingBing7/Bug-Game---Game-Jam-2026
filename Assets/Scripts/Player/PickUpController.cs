@@ -2,6 +2,11 @@ using UnityEngine;
 
 public class PickUpController : MonoBehaviour
 {
+
+    //events 
+    //public delegate void EmptyDelagate();
+    //public event EmptyDelagate GrabbedObject;
+
     // layer mask
 
     public LayerMask IgnoreMe;
@@ -61,11 +66,13 @@ public class PickUpController : MonoBehaviour
     {
         if (pickObject.GetComponent<Rigidbody>())
         {
+           // GrabbedObject?.Invoke();
             //Debug.Log("Grabbed " + pickObject.name);
             heldObjectRB = pickObject.GetComponent<Rigidbody>(); //grabs held objects RB
             heldObjectRB.useGravity = false; //prevents held object from falling
             heldObjectRB.linearDamping = pickUpStiffness; //adds a bit of drag to the object 
             //heldObjectRB.constraints = RigidbodyConstraints.FreezeRotation; //freezes the rotation of the object.
+            pickObject.layer = LayerMask.NameToLayer("IgnoreMe");
 
             heldObjectRB.transform.parent = holdArea;
             heldObject = pickObject;
@@ -89,6 +96,7 @@ public class PickUpController : MonoBehaviour
         heldObjectRB.useGravity = true;
         heldObjectRB.linearDamping = 1;
         //heldObjectRB.constraints = RigidbodyConstraints.None;
+        
 
         heldObjectRB.transform.parent = null;
         heldObject = null;

@@ -39,6 +39,7 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        xRotation = freeLookCamera.transform.rotation.eulerAngles.x;
         /*
         float horizontalInput = Input.GetAxis("Horizontal");
         float verticalInput = Input.GetAxis("Vertical");
@@ -65,10 +66,17 @@ public class PlayerMovement : MonoBehaviour
             StopFlying();
         }
 
+        if (Input.GetKey(KeyCode.S))
+        {
+            //BackwardsFlyingLogic();
+            Debug.Log("ugggg flying backwards");
+        }
+
         currentHeight = Mathf.Clamp(transform.position.y, currentHeight, maxFloatHeight);
         transform.position = new Vector3(transform.position.x, currentHeight, transform.position.z);
     }
 
+    /*
     private void OnCollisionEnter(Collision other)
     {
         if(other.gameObject.CompareTag("Ground"))
@@ -86,6 +94,7 @@ public class PlayerMovement : MonoBehaviour
             Debug.Log("Is Aired");
         }
     }
+    */
 
     private void FlyingLogic()
     {
@@ -102,6 +111,24 @@ public class PlayerMovement : MonoBehaviour
         transform.position += flyDirection * moveSpeed * Time.deltaTime;
         transform.position = new Vector3(transform.position.x, currentHeight, transform.position.z);
     }
+
+    /*
+    private void BackwardsFlyingLogic()
+    {
+        Vector3 cameraForward = new Vector3(freeLookCamera.transform.forward.x, freeLookCamera.transform.forward.y, freeLookCamera.transform.forward.z);
+        transform.rotation = Quaternion.LookRotation(cameraForward);
+        transform.Rotate(new Vector3(0, 0, 0), Space.Self);
+
+        Vector3 forward = freeLookCamera.transform.forward;
+        Vector3 flyDirection = forward.normalized;
+
+        currentHeight += flyDirection.y * moveSpeed * Time.deltaTime;
+        currentHeight = Mathf.Clamp(currentHeight, minFloatHeight, maxFloatHeight);
+
+        transform.position += flyDirection * -moveSpeed * Time.deltaTime;
+        transform.position = new Vector3(transform.position.x, currentHeight, transform.position.z);
+    }
+    */
 
     private void StopFlying()
     {
