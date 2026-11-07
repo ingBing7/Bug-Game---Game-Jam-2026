@@ -11,5 +11,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Test Scenes/TransitionScene.unity
     guid: dcf899f2498f9034d8051d24212907da
+  - enabled: 1
+    path: Assets/Scenes/Gameplay Scenes/Gameplay_Mother.unity
+    guid: 28c613cf2fc932346aed0059b0790f4d
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}

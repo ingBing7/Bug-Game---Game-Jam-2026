@@ -10,7 +10,7 @@ public class TransitionSceneManager : MonoBehaviour
     }
     public void LoadNextScene()
     {
-        fadeToBlack.FadeAndLoad("Sjofn - Test Scene", 1);
+        fadeToBlack.FadeAndLoad("Gameplay_Mother", 1);
     }
     public void QuitGame()
     {
