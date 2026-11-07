@@ -215,7 +215,7 @@ GameObject:
   - component: {fileID: 9001550944619259156}
   - component: {fileID: 5590169048808474218}
   - component: {fileID: 7431938649318580582}
-  - component: {fileID: 4536139872041084172}
+  - component: {fileID: 5961214917502650043}
   m_Layer: 3
   m_Name: Player
   m_TagString: Untagged
@@ -261,11 +261,11 @@ Rigidbody:
     m_Bits: 128
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!114 &7431938649318580582
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -286,8 +286,8 @@ MonoBehaviour:
   freeLookCamera: {fileID: 6464066525726757280}
   currentHeight: 0
   xRotation: 0
---- !u!136 &4536139872041084172
-CapsuleCollider:
+--- !u!135 &5961214917502650043
+SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -299,15 +299,13 @@ CapsuleCollider:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 128
+    m_Bits: 0
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
+  serializedVersion: 3
   m_Radius: 0.5
-  m_Height: 1
-  m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &4057425335971430062
 GameObject:

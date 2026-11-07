@@ -3,6 +3,7 @@ using static PlayerMovement;
 
 public class PlayerMovement : MonoBehaviour
 {
+    /*
     public enum CharacterStates
     {
         InAir,
@@ -10,11 +11,9 @@ public class PlayerMovement : MonoBehaviour
     }
     //State Machine
     [SerializeField] CharacterStates currentState;
+    */
 
     [Header("References")]
-    //public Transform orientation;
-    //public Transform player;
-    //public Transform playerObj;
     [SerializeField] Rigidbody playerRB;
 
     [Header("Movement Variables")]
@@ -31,7 +30,7 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         playerRB = GetComponent<Rigidbody>();
-        currentState = CharacterStates.Grounded;
+        //currentState = CharacterStates.Grounded;
         currentHeight = transform.position.y;
         Cursor.lockState = CursorLockMode.Locked;
     }
@@ -66,35 +65,11 @@ public class PlayerMovement : MonoBehaviour
             StopFlying();
         }
 
-        if (Input.GetKey(KeyCode.S))
-        {
-            //BackwardsFlyingLogic();
-            Debug.Log("ugggg flying backwards");
-        }
-
         currentHeight = Mathf.Clamp(transform.position.y, currentHeight, maxFloatHeight);
-        transform.position = new Vector3(transform.position.x, currentHeight, transform.position.z);
-    }
+        //transform.position = new Vector3(transform.position.x, currentHeight, transform.position.z);
 
-    /*
-    private void OnCollisionEnter(Collision other)
-    {
-        if(other.gameObject.CompareTag("Ground"))
-        {
-            currentState = CharacterStates.Grounded;
-            Debug.Log("Is Grounded");
-        }
+        playerRB.MovePosition(new Vector3(transform.position.x, currentHeight, transform.position.z));
     }
-
-    private void OnCollisionExit(Collision other)
-    {
-        if(other.gameObject.CompareTag("Ground"))
-        {
-            currentState = CharacterStates.InAir;
-            Debug.Log("Is Aired");
-        }
-    }
-    */
 
     private void FlyingLogic()
     {
@@ -110,29 +85,13 @@ public class PlayerMovement : MonoBehaviour
 
         transform.position += flyDirection * moveSpeed * Time.deltaTime;
         transform.position = new Vector3(transform.position.x, currentHeight, transform.position.z);
+        playerRB.constraints = RigidbodyConstraints.None;
     }
-
-    /*
-    private void BackwardsFlyingLogic()
-    {
-        Vector3 cameraForward = new Vector3(freeLookCamera.transform.forward.x, freeLookCamera.transform.forward.y, freeLookCamera.transform.forward.z);
-        transform.rotation = Quaternion.LookRotation(cameraForward);
-        transform.Rotate(new Vector3(0, 0, 0), Space.Self);
-
-        Vector3 forward = freeLookCamera.transform.forward;
-        Vector3 flyDirection = forward.normalized;
-
-        currentHeight += flyDirection.y * moveSpeed * Time.deltaTime;
-        currentHeight = Mathf.Clamp(currentHeight, minFloatHeight, maxFloatHeight);
-
-        transform.position += flyDirection * -moveSpeed * Time.deltaTime;
-        transform.position = new Vector3(transform.position.x, currentHeight, transform.position.z);
-    }
-    */
 
     private void StopFlying()
     {
         transform.rotation = Quaternion.Euler(0, transform.rotation.eulerAngles.y, 0);
+        playerRB.constraints = RigidbodyConstraints.FreezePosition;
     }
 }
 

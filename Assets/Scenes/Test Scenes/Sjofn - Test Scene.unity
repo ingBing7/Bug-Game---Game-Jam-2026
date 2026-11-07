@@ -272,6 +272,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 478884260}
+    - target: {fileID: 3194959494892213183, guid: bc4bc92321901be4ea8cd6f7466ad329, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7437699806418076903, guid: bc4bc92321901be4ea8cd6f7466ad329, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.747
@@ -538,6 +542,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 478884260}
+    - target: {fileID: 3194959494892213183, guid: bc4bc92321901be4ea8cd6f7466ad329, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7437699806418076903, guid: bc4bc92321901be4ea8cd6f7466ad329, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.3
@@ -599,6 +607,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 478884260}
+    - target: {fileID: 3194959494892213183, guid: bc4bc92321901be4ea8cd6f7466ad329, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7437699806418076903, guid: bc4bc92321901be4ea8cd6f7466ad329, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.79
@@ -998,6 +1010,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 478884260}
+    - target: {fileID: 3194959494892213183, guid: bc4bc92321901be4ea8cd6f7466ad329, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7437699806418076903, guid: bc4bc92321901be4ea8cd6f7466ad329, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.114
