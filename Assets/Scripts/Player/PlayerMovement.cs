@@ -85,7 +85,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void FlyingLogic()
     {
-        Vector3 cameraForward = new Vector3(freeLookCamera.transform.forward.x, 0, freeLookCamera.transform.forward.z);
+        Vector3 cameraForward = new Vector3(freeLookCamera.transform.forward.x, freeLookCamera.transform.forward.y, freeLookCamera.transform.forward.z);
         transform.rotation = Quaternion.LookRotation(cameraForward);
         transform.Rotate(new Vector3(0, 0, 0), Space.Self);
 
