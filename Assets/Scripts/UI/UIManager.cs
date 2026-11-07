@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class UIManager : MonoBehaviour
 {
-
+    /*
     void Start()
     {
         Locator.Instance.Task.IncreaseCounter += IncreaseCounter;
@@ -23,4 +23,5 @@ public class UIManager : MonoBehaviour
     {
         Debug.Log("completed the task");
     }
+    */
 }

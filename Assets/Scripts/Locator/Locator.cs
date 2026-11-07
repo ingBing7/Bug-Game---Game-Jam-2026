@@ -4,7 +4,8 @@ public class Locator : MonoBehaviour
 {
     public static Locator Instance { get; private set; }
     public PickUpController PickUp { get; private set; }
-    public TaskHandler Task {  get; private set; }
+    public PackingTask PackTask {  get; private set; }
+    public SportTask SportTask { get; private set; }
 
     private void Awake()
     {
@@ -17,9 +18,11 @@ public class Locator : MonoBehaviour
         Instance = this;
 
         GameObject raycastHolder = GameObject.FindWithTag("Raycast Holder");
-        GameObject taskZone = GameObject.FindWithTag("Task Zone");
+        GameObject packTaskZone = GameObject.FindWithTag("Pack Task Zone");
+        GameObject sportTaskZone = GameObject.FindWithTag("Sport Task Zone");
 
         PickUp = raycastHolder.GetComponent<PickUpController>();
-        Task = taskZone.GetComponent<TaskHandler>();
+        PackTask = packTaskZone.GetComponent<PackingTask>();
+        SportTask = sportTaskZone.GetComponent<SportTask>();
     }
 }

@@ -8,8 +8,15 @@ public class PickUpController : MonoBehaviour
     //public event EmptyDelagate GrabbedObject;
 
     // layer mask
-
     public LayerMask IgnoreMe;
+
+    // events
+    public delegate void EmptyDelagate();
+    public event EmptyDelagate GrabbedObject;
+    public event EmptyDelagate DroppedObject;
+    public event EmptyDelagate ThrewObject;
+
+
 
     [Header("Pick Up Settings")]
     [SerializeField] Transform holdArea;
@@ -74,6 +81,7 @@ public class PickUpController : MonoBehaviour
     {
         if (pickObject.GetComponent<Rigidbody>())
         {
+            GrabbedObject?.Invoke();
             heldObjectRB = pickObject.GetComponent<Rigidbody>(); //grabs held objects RB
             heldObjectRB.useGravity = false; //prevents held object from falling
             heldObjectRB.linearDamping = pickUpStiffness; //adds a bit of drag to the object 
@@ -87,6 +95,7 @@ public class PickUpController : MonoBehaviour
 
     void ThrowObject()
     {
+        ThrewObject?.Invoke();
         heldObjectRB.AddForce(transform.forward * throwForce);
         heldObjectRB.useGravity = true;
         heldObjectRB.linearDamping = 1;
@@ -99,7 +108,7 @@ public class PickUpController : MonoBehaviour
     void DropObject()
     {
         //This basically undoes everything PickUpObject does. 
-        //I'd like to add some force to throw the object a bit, especially in regards to the rats, but that might make some puzzles a bit harder...
+        DroppedObject?.Invoke();
         heldObjectRB.useGravity = true;
         heldObjectRB.linearDamping = 1;
         heldObjectRB.constraints = RigidbodyConstraints.None;

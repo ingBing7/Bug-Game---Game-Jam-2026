@@ -8,6 +8,9 @@ TagManager:
   - Raycast Holder
   - BoxObject
   - Task Zone
+  - Pack Task Zone
+  - SportBall
+  - Sport Task Zone
   layers:
   - Default
   - TransparentFX
