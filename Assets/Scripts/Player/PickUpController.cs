@@ -25,13 +25,6 @@ public class PickUpController : MonoBehaviour
     [SerializeField] private float pickUpStiffness = 20f; //higher the number, less bounciness. Lower the number, more bounciness. 
     [SerializeField] private float throwForce = 3f;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
     void Update()
     {
         if(Input.GetMouseButtonDown(0))

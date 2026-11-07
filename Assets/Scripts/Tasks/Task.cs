@@ -16,7 +16,7 @@ public class Task : MonoBehaviour
         {
             levelOver = true;
             //fade to black, indicates somehow that the player has died.
-            fadeToBlack.FadeAndLoad("Sjofn - Test Scene", 1);
+            fadeToBlack.FadeAndLoad("TransitionScene", 1);
         }
     }
 

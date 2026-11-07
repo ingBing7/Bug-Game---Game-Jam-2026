@@ -6,17 +6,6 @@ using System.Collections;
 public class FadeToBlack : MonoBehaviour
 {
     public Image image;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     public void FadeAndLoad(string sceneName, float duration)
     {   
