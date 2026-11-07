@@ -93,7 +93,7 @@ public class PickUpController : MonoBehaviour
         heldObjectRB.constraints = RigidbodyConstraints.None;
         heldObjectRB.transform.parent = null;
         heldObject = null;
-        Debug.Log("Thrown Object");
+        //Debug.Log("Thrown Object");
     }
 
     void DropObject()
