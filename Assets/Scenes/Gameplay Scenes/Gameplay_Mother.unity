@@ -10071,6 +10071,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5485593568543866910, guid: 7145805409186404db76f26c10353e4b, type: 3}
+      propertyPath: task
+      value: 
+      objectReference: {fileID: 1047703362}
+    - target: {fileID: 5485593568543866910, guid: 7145805409186404db76f26c10353e4b, type: 3}
+      propertyPath: audioManager
+      value: 
+      objectReference: {fileID: 600599968}
     - target: {fileID: 6968090728849644814, guid: 7145805409186404db76f26c10353e4b, type: 3}
       propertyPath: m_LocalScale.x
       value: 5.0350137

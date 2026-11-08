@@ -24,7 +24,7 @@ public class Task : MonoBehaviour
             else if(isMotherScene)
             {
                 levelOver = true;
-                fadeToBlack.FadeAndLoad("TransitionScene2", 1);
+                fadeToBlack.FadeAndLoad("TransitionScene 2", 1);
             }
             else if(isMotherScene2)
             {
