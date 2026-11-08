@@ -14,19 +14,9 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] Camera freeLookCamera;
     [SerializeField] float currentHeight;
     [SerializeField] float xRotation;
+    public bool canMove = true;
 
-    public CollisionStopped collisionStopped;
-
-    public float rotationSpeed = 100f;
-    
-    // Define your boundaries (e.g., limit looking up and down)
-    public float minAngle = -45f;
-    public float maxAngle = 45f;
-
-    // Track the absolute angle yourself
-    private float currentXRotation = 0f;
-
-
+    //public CollisionStopped collisionStopped;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -55,11 +45,17 @@ public class PlayerMovement : MonoBehaviour
         //transform.position = new Vector3(transform.position.x, currentHeight, transform.position.z);
 
         playerRB.MovePosition(new Vector3(transform.position.x, currentHeight, transform.position.z));
+
+        if(!canMove)
+        {
+            transform.position += new Vector3(0f, .1f, -.1f) * Time.deltaTime;
+        }
     }
 
     private void FlyingLogic()
     {
-
+        if(canMove)
+        {
             Vector3 cameraForward = new Vector3(freeLookCamera.transform.forward.x, freeLookCamera.transform.forward.y, freeLookCamera.transform.forward.z);
             transform.rotation = Quaternion.LookRotation(cameraForward);
             transform.Rotate(new Vector3(0, 0, 0), Space.Self);
@@ -72,14 +68,25 @@ public class PlayerMovement : MonoBehaviour
 
             transform.position += flyDirection * moveSpeed * Time.deltaTime;
             transform.position = new Vector3(transform.position.x, currentHeight, transform.position.z);
-
+            playerRB.constraints = RigidbodyConstraints.None;
+        }
 
     }
 
-    public void StopFlying()
+    private void StopFlying()
     {
         transform.rotation = Quaternion.Euler(0, transform.rotation.eulerAngles.y, 0);
         playerRB.constraints = RigidbodyConstraints.FreezePosition;
+    }
+
+    public void CollisionCheck()
+    {
+        canMove = false;
+        //transform.position += new Vector3(0f, 1f, -1f);
+    }
+    public void CollisionFix()
+    {
+        canMove = true;
     }
 
 }

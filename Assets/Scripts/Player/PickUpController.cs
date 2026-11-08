@@ -76,6 +76,7 @@ public class PickUpController : MonoBehaviour
             heldObjectRB.linearDamping = pickUpStiffness; //adds a bit of drag to the object 
             heldObjectRB.constraints = RigidbodyConstraints.FreezeRotation; //freezes the rotation of the object.
             pickObject.layer = LayerMask.NameToLayer("IgnoreMe");
+            Debug.Log("picked up" + pickObject.name);
 
             heldObjectRB.transform.parent = holdArea;
             heldObject = pickObject;
@@ -91,7 +92,7 @@ public class PickUpController : MonoBehaviour
         heldObjectRB.constraints = RigidbodyConstraints.None;
         heldObjectRB.transform.parent = null;
         heldObject = null;
-        //Debug.Log("Thrown Object");
+        Debug.Log("Thrown Object");
     }
 
     void DropObject()
@@ -101,7 +102,7 @@ public class PickUpController : MonoBehaviour
         heldObjectRB.useGravity = true;
         heldObjectRB.linearDamping = 1;
         heldObjectRB.constraints = RigidbodyConstraints.None;
-        
+        Debug.Log("droped");
 
         heldObjectRB.transform.parent = null;
         heldObject = null;
