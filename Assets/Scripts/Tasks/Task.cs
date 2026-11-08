@@ -21,18 +21,26 @@ public class Task : MonoBehaviour
                 levelOver = true;
                 fadeToBlack.FadeAndLoad("TransitionScene", 1);
             }
-            else if(isMotherScene)
+
+            if(isMotherScene)
             {
                 levelOver = true;
                 fadeToBlack.FadeAndLoad("TransitionScene 2", 1);
             }
-            else if(isMotherScene2)
+
+            if(isMotherScene2 == true)
             {
                 levelOver = true;
+                Debug.Log("IsMother2Scene");
                 fadeToBlack.FadeAndLoad("FinalScene", 1);
             }
 
         }
+    }
+
+    public void RemoveCounter()
+    {
+        tasksCompleted--;
     }
 
     public void IsMotherScene()
@@ -42,6 +50,7 @@ public class Task : MonoBehaviour
     public void IsMother2Scene()
     {
         isMotherScene2 = true;
+        Debug.Log("mother2 scene bool set");
     }
 
 }

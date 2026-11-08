@@ -62,7 +62,7 @@ Transform:
   m_GameObject: {fileID: 1478977261975221435}
   serializedVersion: 2
   m_LocalRotation: {x: 0.1521234, y: -2.107918e-10, z: 3.2443968e-11, w: 0.98836154}
-  m_LocalPosition: {x: 0.09389, y: 2.326529, z: -3.3022847}
+  m_LocalPosition: {x: 0.09389, y: -21.186472, z: -3.3022847}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -456,7 +456,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 354cea03b136908408dacb28ce1dc2f4, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: ca90b365d4f53204a9a88ba112b1d39f, type: 2}
+      objectReference: {fileID: 2100000, guid: dd22cc58f584a474eb231e798a868ea5, type: 2}
     - target: {fileID: 919132149155446097, guid: 354cea03b136908408dacb28ce1dc2f4, type: 3}
       propertyPath: m_Name
       value: DRAGONFLY_PLAYER

@@ -13,4 +13,13 @@ public class FinalTask : MonoBehaviour
             task.UpdateOverallTaskCounter();
         }
     }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            audioManager.TaskCompletedSound();
+            task.RemoveCounter();
+        }
+    }
 }
