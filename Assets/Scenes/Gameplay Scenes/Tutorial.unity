@@ -8960,6 +8960,14 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 2236192459906567474, guid: a816d109f006fdc4a8242c5f1b4e1d09, type: 3}
+      propertyPath: task
+      value: 
+      objectReference: {fileID: 1047703362}
+    - target: {fileID: 2236192459906567474, guid: a816d109f006fdc4a8242c5f1b4e1d09, type: 3}
+      propertyPath: audioManager
+      value: 
+      objectReference: {fileID: 600599968}
+    - target: {fileID: 2236192459906567474, guid: a816d109f006fdc4a8242c5f1b4e1d09, type: 3}
       propertyPath: maxObjectsInBox
       value: 3
       objectReference: {fileID: 0}
