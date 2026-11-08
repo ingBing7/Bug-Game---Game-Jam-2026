@@ -46,7 +46,7 @@ GameObject:
   - component: {fileID: 399864245594909661}
   - component: {fileID: 6019319067697664972}
   - component: {fileID: 208364104967298830}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -218,7 +218,7 @@ GameObject:
   - component: {fileID: 5961214917502650043}
   m_Layer: 3
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -232,7 +232,7 @@ Transform:
   m_GameObject: {fileID: 3703645788767423330}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.09389, y: 0.823, z: 1.4663}
+  m_LocalPosition: {x: 0.09389, y: -22.69, z: 1.4663}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -255,7 +255,7 @@ Rigidbody:
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 1
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 128
@@ -299,13 +299,13 @@ SphereCollider:
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
-  m_LayerOverridePriority: 0
+  m_LayerOverridePriority: 27
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Radius: 0.76
+  m_Center: {x: 0, y: 0, z: -0.19}
 --- !u!1 &4057425335971430062
 GameObject:
   m_ObjectHideFlags: 0
@@ -316,7 +316,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3272983502892527467}
   - component: {fileID: 7775989353076446339}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Raycast Holder
   m_TagString: Raycast Holder
   m_Icon: {fileID: 0}
