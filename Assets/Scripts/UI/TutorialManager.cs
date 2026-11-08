@@ -2,15 +2,17 @@ using UnityEngine;
 
 public class TutorialManager : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public GameObject firstTutorialPopUp;
+    public GameObject secondTutorialPopUp;
+
+    private void OnTriggerExit(Collider other)
     {
-        
+        if(other.gameObject.CompareTag("Player"))
+        {
+
+            firstTutorialPopUp.SetActive(false);
+            secondTutorialPopUp.SetActive(true);
+        }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
