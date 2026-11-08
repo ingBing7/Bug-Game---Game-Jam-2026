@@ -75,7 +75,7 @@ public class PickUpController : MonoBehaviour
             heldObjectRB.useGravity = false; //prevents held object from falling
             heldObjectRB.linearDamping = pickUpStiffness; //adds a bit of drag to the object 
             heldObjectRB.constraints = RigidbodyConstraints.FreezeRotation; //freezes the rotation of the object.
-            //pickObject.layer = LayerMask.NameToLayer("IgnoreMe");
+            pickObject.layer = LayerMask.NameToLayer("IgnoreMe");
 
             heldObjectRB.transform.parent = holdArea;
             heldObject = pickObject;

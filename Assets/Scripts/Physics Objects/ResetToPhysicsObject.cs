@@ -11,7 +11,7 @@ public class ResetToPhysicsObject : MonoBehaviour
     {
         //uggg finds distance between player
         distanceFromPlayer = Vector3.Distance(player.transform.position, physicsObject.transform.position);
-        if(distanceFromPlayer >= 2f)
+        if(distanceFromPlayer >= 6f)
         {
             gameObject.layer = LayerMask.NameToLayer("Physics Object");
 
