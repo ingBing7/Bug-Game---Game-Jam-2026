@@ -15,6 +15,17 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] float currentHeight;
     [SerializeField] float xRotation;
 
+    public CollisionStopped collisionStopped;
+
+    public float rotationSpeed = 100f;
+    
+    // Define your boundaries (e.g., limit looking up and down)
+    public float minAngle = -45f;
+    public float maxAngle = 45f;
+
+    // Track the absolute angle yourself
+    private float currentXRotation = 0f;
+
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -48,26 +59,29 @@ public class PlayerMovement : MonoBehaviour
 
     private void FlyingLogic()
     {
-        Vector3 cameraForward = new Vector3(freeLookCamera.transform.forward.x, freeLookCamera.transform.forward.y, freeLookCamera.transform.forward.z);
-        transform.rotation = Quaternion.LookRotation(cameraForward);
-        transform.Rotate(new Vector3(0, 0, 0), Space.Self);
 
-        Vector3 forward = freeLookCamera.transform.forward;
-        Vector3 flyDirection = forward.normalized;
+            Vector3 cameraForward = new Vector3(freeLookCamera.transform.forward.x, freeLookCamera.transform.forward.y, freeLookCamera.transform.forward.z);
+            transform.rotation = Quaternion.LookRotation(cameraForward);
+            transform.Rotate(new Vector3(0, 0, 0), Space.Self);
 
-        currentHeight += flyDirection.y * moveSpeed * Time.deltaTime;
-        currentHeight = Mathf.Clamp(currentHeight, minFloatHeight, maxFloatHeight);
+            Vector3 forward = freeLookCamera.transform.forward;
+            Vector3 flyDirection = forward.normalized;
 
-        transform.position += flyDirection * moveSpeed * Time.deltaTime;
-        transform.position = new Vector3(transform.position.x, currentHeight, transform.position.z);
-        playerRB.constraints = RigidbodyConstraints.None;
+            currentHeight += flyDirection.y * moveSpeed * Time.deltaTime;
+            currentHeight = Mathf.Clamp(currentHeight, minFloatHeight, maxFloatHeight);
+
+            transform.position += flyDirection * moveSpeed * Time.deltaTime;
+            transform.position = new Vector3(transform.position.x, currentHeight, transform.position.z);
+
+
     }
 
-    private void StopFlying()
+    public void StopFlying()
     {
         transform.rotation = Quaternion.Euler(0, transform.rotation.eulerAngles.y, 0);
         playerRB.constraints = RigidbodyConstraints.FreezePosition;
     }
+
 }
 
 //tutorial followed: https://www.youtube.com/watch?v=8_49VvqssMU
