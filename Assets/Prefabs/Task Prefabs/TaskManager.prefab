@@ -48,4 +48,14 @@ MonoBehaviour:
   maxTasksForDay: 2
   levelOver: 0
   isMotherScene: 0
+  isMotherScene2: 0
+  Counter1: {fileID: 0}
+  Counter2: {fileID: 0}
+  Counter3: {fileID: 0}
+  deactivatedCounter1: {fileID: 0}
+  deactivatedCounter2: {fileID: 0}
+  deactivatedCounter3: {fileID: 0}
+  mainGoober1: {fileID: 0}
+  mainGoober2: {fileID: 0}
+  mainGoober3: {fileID: 0}
   fadeToBlack: {fileID: 0}
