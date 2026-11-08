@@ -47,3 +47,5 @@ MonoBehaviour:
   tasksCompleted: 0
   maxTasksForDay: 2
   levelOver: 0
+  isMotherScene: 0
+  fadeToBlack: {fileID: 0}

@@ -12,6 +12,11 @@ public class TransitionSceneManager : MonoBehaviour
     {
         fadeToBlack.FadeAndLoad("Gameplay_Mother", 1);
     }
+
+    public void LoadFinalScene()
+    {
+        fadeToBlack.FadeAndLoad("Gameplay_2", 1);
+    }
     public void QuitGame()
     {
         Application.Quit();

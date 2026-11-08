@@ -116,5 +116,7 @@ public class PickUpController : MonoBehaviour
 
         Gizmos.DrawRay(startingPOint, direction);
         //this draws a line so I can see where the ray is. 
+
+
     }
 }
